@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const {connectDB, sequelize} = require('./config/sequelizeConfig')
+const cors = require('cors')
 
+app.use(cors())
 app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes");
